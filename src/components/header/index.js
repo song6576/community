@@ -15,6 +15,7 @@ class Headers extends Component {
     currentTime: formateDate(Date.now()), // 当前时间字符串
     weather: '', // 天气文本
     temperature: '', // 当地温度
+    city: '', // 城市
   }
 
    // 获取时间
@@ -28,10 +29,10 @@ class Headers extends Component {
   // 获取天气
   getWeather = async () => {
     // 调用接口，获取异步数据
-    const { weather, temperature } = await reqWeather('江西')
+    const { weather, temperature,city } = await reqWeather('江西')
     // 改变状态
-    this.setState({weather, temperature})
-    console.log(temperature)
+    this.setState({weather, temperature,city})
+    // console.log(temperature)
   }
 
   /**
@@ -44,7 +45,7 @@ class Headers extends Component {
 
   render() {
     // 取出{ currentTime, weather }
-    const { currentTime, weather, temperature } = this.state
+    const { currentTime, weather, temperature, city } = this.state
     const {user} = this.props
     const menu = (
       <Menu>
@@ -60,6 +61,7 @@ class Headers extends Component {
         {/* 天气、时间 */}
         <div className="header-content">
           <span className="header-time">{currentTime}</span>
+          <span className='header-weather'>当前 {city}</span>
           <span className='header-weather'>{weather}</span>
           <span className='header-temperature'>{temperature}°c</span>
         {/* 用户信息 */}

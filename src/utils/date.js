@@ -1,6 +1,5 @@
 /**
- * 日期模块
-格式化日期
+ * 日期模块——格式化日期
 */
 
 export function formateDate(time) {

@@ -11,9 +11,8 @@ const user = storage.getUser()
 memory.user = user
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode></React.StrictMode> 取消了本标签包裹的<App />，取消了react中的严格模式(存在时，使用antd会报错)
+    <App />,
   document.getElementById('root')
 );
 

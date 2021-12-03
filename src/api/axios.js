@@ -7,14 +7,14 @@
 import axios from 'axios'
 import { message } from 'antd'
 
-export default function ajax(url,data={},type='GET') {
+export default function ajax(url,data={},type='POST') {
   /**
  * 统一统计错误
  */
   return new Promise ((resolve,reject) => {
     let promise
     // 1、执行异步ajax请求
-    if (type==='POST') { // 发送GET请求
+    if (type==='GET') { // 发送GET请求
       promise = axios.get(url, { // 配置对象
         params: data // 指定请求参数
       })

@@ -11,17 +11,20 @@ import { HomeOutlined,
   PushpinOutlined
 } from '@ant-design/icons';
 import './index.less';
-import { Link } from 'react-router-dom';
+import { Link,withRouter } from 'react-router-dom';
+import menuList from '../../utils/menuConfig'
 
 const { SubMenu } = Menu;
 
-export default class LeftNav extends Component {
+class LeftNav extends Component {
 
   handleClick = e => {
     console.log('click ', e);
   };
 
   render() {
+    const path = this.props.location.pathname
+    // console.log(path)
     return (
       <div>
         <div style={{textAlign: 'center',margin: '30px 0'}}>
@@ -30,7 +33,7 @@ export default class LeftNav extends Component {
         <Menu
           onClick={this.handleClick}
           style={{ width: 200 }}
-          defaultSelectedKeys={['1']}
+          defaultSelectedKeys={[path]}
           defaultOpenKeys={['sub1']}
           mode="inline"
           theme='dark'
@@ -40,7 +43,7 @@ export default class LeftNav extends Component {
           </Menu.Item>
           <SubMenu key="sub1" icon={<TeamOutlined />} title="系统用户">
             <Menu.Item key="2">
-              <Link to='/user'>管理员</Link>
+              <Link to='/user'>系统用户</Link>
             </Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" icon={<HomeOutlined />} title="居民管理">
@@ -91,3 +94,5 @@ export default class LeftNav extends Component {
     )
   }
 }
+
+export default withRouter(LeftNav)
