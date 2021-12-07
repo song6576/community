@@ -9,8 +9,8 @@ import { message } from 'antd'
 
 export default function ajax(url,data={},type='POST') {
   /**
- * 统一统计错误
- */
+   * 统一统计错误
+   */
   return new Promise ((resolve,reject) => {
     let promise
     // 1、执行异步ajax请求

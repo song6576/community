@@ -56,7 +56,7 @@ class Headers extends Component {
       <div className='header'>
         {/* 当前路由地址 */}
         <div className='header-path'>
-          <span>首页</span>
+          <span>诊断管理</span>
         </div>
         {/* 天气、时间 */}
         <div className="header-content">

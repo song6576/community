@@ -38,7 +38,7 @@ class LeftNav extends Component {
           mode="inline"
           theme='dark'
         >
-          <Menu.Item key="1">
+          <Menu.Item key="1" icon={<PieChartOutlined />}>
             <Link to='/home'>首页</Link>
           </Menu.Item>
           <SubMenu key="sub1" icon={<TeamOutlined />} title="系统用户">
@@ -69,7 +69,7 @@ class LeftNav extends Component {
               <Link to='/vaccine'>接种管理</Link>
             </Menu.Item>
           </SubMenu>
-          <SubMenu key="sub6" icon={<GlobalOutlined />} title="访客管理">
+          {/* <SubMenu key="sub6" icon={<GlobalOutlined />} title="访客管理">
             <Menu.Item key="8">
               <Link to='/visitors'>访客记录</Link>
               </Menu.Item>
@@ -88,7 +88,7 @@ class LeftNav extends Component {
             <Menu.Item key="11">
               <Link to='/cases'>病例记录</Link>
             </Menu.Item>
-          </SubMenu>
+          </SubMenu> */}
         </Menu>
       </div>
     )
