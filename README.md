@@ -70,5 +70,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ### 效果图
-![Image text](https://github.com/song6576/community/blob/dev/src/assets/img/head.png)
+**首页**
 
+![Image text](https://community-1303941020.cos.ap-nanjing.myqcloud.com/communityImg%2Fhead.png)
+
+**系统用户**
+![Image text](https://community-1303941020.cos.ap-nanjing.myqcloud.com/communityImg%2Fusers.png)
+
+**居民管理**
+![Image text](https://community-1303941020.cos.ap-nanjing.myqcloud.com/communityImg%2Fhead.png)
+
+**物资管理**
+![Image text](https://community-1303941020.cos.ap-nanjing.myqcloud.com/communityImg%2Fwuzi.png)
+
+**诊断管理**
+![Image text](https://community-1303941020.cos.ap-nanjing.myqcloud.com/communityImg%2Fzhenduan.png)
+
+**疫苗接种**
+![Image text](https://community-1303941020.cos.ap-nanjing.myqcloud.com/communityImg%2Fyimiao.png)
