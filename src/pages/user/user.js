@@ -31,7 +31,7 @@ export default class User extends Component {
    */
   queryUser = async() => {
     const result = await reqUsers()
-    if(result.status == 1) {
+    if(result.status === 200) {
       const role = result.data
       this.setState({users:role})
     }
@@ -152,7 +152,7 @@ export default class User extends Component {
   onFinish = async(values) => {
     const {username,password,iphone} = values
     const result = await reqAddUser(username,password,iphone)
-    if (result.status == 200) {
+    if (result.status === 200) {
       message.success('添加用户成功')
       this.handleCancel() // 添加成功关闭弹窗
       this.queryUser() // 添加成功重新查询用户列表
@@ -170,7 +170,7 @@ export default class User extends Component {
    */
   delect = async(i,username) => {
     const result = await reqdelUser(i)
-    if (result.status == 200) {
+    if (result.status === 200) {
       message.success(`删除${username}用户成功`)
       this.queryUser()
     } else {
@@ -185,7 +185,7 @@ export default class User extends Component {
   editorOnFinish = async(values) => {
     const { id,username,password,role,iphone } = values
     const result = await reqUpdataUser(id,username,password,role,iphone)
-    if(result.status == 200) {
+    if(result.status === 200) {
       message.success(`${username}用户修改成功`)
       this.queryUser()
     } else {
