@@ -38,7 +38,7 @@ class LeftNav extends Component {
           mode="inline"
           theme='dark'
         >
-          <Menu.Item key="1">
+          <Menu.Item key="1" icon={<PieChartOutlined />}>
             <Link to='/home'>首页</Link>
           </Menu.Item>
           <SubMenu key="sub1" icon={<TeamOutlined />} title="系统用户">
