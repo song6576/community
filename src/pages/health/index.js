@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
 
-/**
- * 健康上报
- */
-export default class Health extends Component {
+export default class index extends Component {
   render() {
     return (
       <div>
-        健康上报
       </div>
     )
   }

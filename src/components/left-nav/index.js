@@ -73,10 +73,13 @@ class LeftNav extends Component {
             <Menu.Item key="8">
               <Link to='/visitors'>访客记录</Link>
               </Menu.Item>
-          </SubMenu>
+          </SubMenu> */}
           <SubMenu key="sub7" icon={<VerifiedOutlined />} title="健康管理">
+            <Menu.Item key="8">
+              <Link to='/health/healthAdmin'>健康上报</Link>
+            </Menu.Item>
             <Menu.Item key="9">
-              <Link to='/health'>健康上报</Link>
+              <Link to='/health/clock'>健康打卡</Link>
             </Menu.Item>
           </SubMenu>
           <SubMenu key="sub8" icon={<BellOutlined />} title="疫情通告">
@@ -84,7 +87,7 @@ class LeftNav extends Component {
               <Link to='/outbreakNotice'>疫情通告</Link>
             </Menu.Item>
           </SubMenu>
-          <SubMenu key="sub9" icon={<PieChartOutlined />} title="病例统计">
+          {/* <SubMenu key="sub9" icon={<PieChartOutlined />} title="病例统计">
             <Menu.Item key="11">
               <Link to='/cases'>病例记录</Link>
             </Menu.Item>

@@ -18,9 +18,10 @@ import SuppliesAdmin from '../supplies/suppliesAdmin/suppliesAdmin';
 import Diagnosis from '../diagnosis/diagnosis';
 import Vaccine from '../vaccine/vaccine';
 import Visitors from '../visitors/visitors';
-import Health from '../health/health';
+import Health from '../health/healthAdmin/health';
 import OutbreakNotice from '../outbreakNotice/outbreakNotice';
 import Cases from '../cases/cases'
+import Clock from '../health/clock/clock'
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -50,7 +51,8 @@ export default class Admin extends Component {
             <Route path='/diagnosis' component={Diagnosis} />
             <Route path='/vaccine' component={Vaccine} />
             <Route path='/visitors' component={Visitors} />
-            <Route path='/health' component={Health} />
+            <Route path='/health/healthAdmin' component={Health} />
+            <Route path='/health/clock' component={Clock} />
             <Route path='/outbreakNotice' component={OutbreakNotice} />
             <Route path='/cases' component={Cases} />
             <Redirect to='/home' />
